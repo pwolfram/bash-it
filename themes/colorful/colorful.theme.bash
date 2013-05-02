@@ -54,8 +54,8 @@ prompt() {
 
 
     # nice prompt
-    PS1="\[\e]0;\u@\h: \w\a\]${purple}┌─[$my_ps_root${purple}][$my_ps_host${purple}]$(modern_scm_prompt)$(__my_rvm_ruby_version)${purple}[${my_ps_path}${purple}]$(is_vim_shell)
-└─▪ ${reset_color}"
+    PS1="\[\e]0;\u@\h: \w\a\]${purple}┌─[$my_ps_root${purple}][$my_ps_host${purple}][${my_ps_path}${purple}]$(modern_scm_prompt)$(__my_rvm_ruby_version)$(is_vim_shell)
+${purple}└─▪ ${reset_color}"
 }
 
 PS2="${purple}└─▪ ${reset_color}"
