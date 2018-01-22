@@ -21,13 +21,13 @@ esac
 
 PS3=">> "
 
-__my_rvm_ruby_version() {
-    local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
-  [ "$gemset" != "" ] && gemset="@$gemset"
-    local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
-    local full="$version$gemset"
-  [ "$full" != "" ] && echo "[$full]"
-}
+#__my_rvm_ruby_version() {
+#    local gemset=$(echo $GEM_HOME | awk -F'@' '{print $2}')
+#  [ "$gemset" != "" ] && gemset="@$gemset"
+#    local version=$(echo $MY_RUBY_HOME | awk -F'-' '{print $2}')
+#    local full="$version$gemset"
+#  [ "$full" != "" ] && echo "[$full]"
+#}
 
 is_vim_shell() {
         if [ ! -z "$VIMRUNTIME" ]
@@ -54,7 +54,8 @@ prompt() {
 
 
     # nice prompt
-    PS1="\[\e]0;\u@\h: \w\a\]${purple}┌─[$my_ps_root${purple}][$my_ps_host${purple}][${my_ps_path}${purple}][${yellow}\A${purple}]$(modern_scm_prompt)$(__my_rvm_ruby_version)$(is_vim_shell)
+    #PS1="\[\e]0;\u@\h: \w\a\]${purple}┌─[$my_ps_root${purple}][$my_ps_host${purple}][${my_ps_path}${purple}][${yellow}\A${purple}]
+    PS1="\[\e]0;\u@\h: \w\a\]${purple}┌─[$my_ps_root${purple}][$my_ps_host${purple}][${my_ps_path}${purple}][${yellow}\A${purple}]$(modern_scm_prompt)
 ${purple}└─▪ ${reset_color}"
 }
 
